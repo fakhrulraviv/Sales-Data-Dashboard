@@ -1,4 +1,4 @@
 # Sales-Data-Dashboard
 Designed ERD using DrawSQL.
-EDA dataset using BigQuery.
+Processed EDA the dataset using BigQuery.
 Built dashboard using Looker Studio.

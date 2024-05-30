@@ -1,0 +1,15 @@
+###  https://console.cloud.google.com/bigquery?sq=251236454871:8ad9f206ed4443ff8b9baaa992ad4292
+
+SELECT O.date as order_date,
+PC.CategoryName as category_name,
+P.prodname as product_name,
+P.price as product_price,
+O.quantity as order_qty,
+(P.price*O.quantity) as total_sales,
+C.customeremail as cust_email,
+C.customercity as cust_city FROM
+`datasetpenjualan.Orders` O
+join `datasetpenjualan.Products` P on P.prodnumber = O.prodnumber
+join `datasetpenjualan.Customers` C on C.customerid = O.customerid
+join `datasetpenjualan.ProductCategory` PC on PC.CategoryID = P.Category
+order by O.date
